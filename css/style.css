@@ -50,7 +50,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-attachment: absolute;
-    height: 100%;
+    height: 90%;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -59,36 +59,25 @@ body {
     margin-bottom:1em;
 }
 #part1intro {
-    background-image:url('http://placehold.it/1800x1301&text=Big+Leader+Photo');
-}
-#part2intro {
-    background-image:url('../img/opener-part2.jpg');
-}
-#part3intro {
-    background-image:url('../img/opener-part3.jpg');
+    background-image:url('../img/project-header.jpg');
 }
 .opener div#title {
-    position: absolute;
+    background-color:rgba(0,0,0,0.35);
     z-index: -1;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    text-align:center;
 }
 .opener div#title h2 {
-    text-transform: uppercase;
-    position: absolute;
-    bottom:0;
-    font-size:12.5em;
-    text-align:center;
+    font-size:5em;
     width:100%;
-    line-height:.55;
+    line-height:1;
     color:#f9f9f9;
     font-weight: 700;
     letter-spacing:-2px;
-    word-spacing:12px;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    padding-top:.5em;
 }
 #adwrapper a.boxclose:hover {
     color:#333;
@@ -115,6 +104,7 @@ div#name1 {
     width:18em;
     padding:.1em;
     opacity:1;
+    z-index:2;
 }
 div#name2 {
     top:.6em;
@@ -828,21 +818,6 @@ div#footer-bar ul.social li {
     float:left;
     display:inline-block;
 }
-@media (max-width:1550px) {
-    .opener div#title h2 {
-        font-size:12em;
-    }
-}
-@media (max-width:1450px) {
-    .opener div#title h2 {
-        font-size:11em;
-    }
-}
-@media (max-width:1340px) {
-    .opener div#title h2 {
-        font-size:10em;
-    }
-}
 @media (max-width:1240px) {
     .inset-video-right, section.inset .inset-video-right {
         margin-right:0;
@@ -853,23 +828,7 @@ div#footer-bar ul.social li {
         width:50%;
     }
     .opener div#title h2 {
-        font-size:10em;
-    }
-}
-@media (max-width:1200px) {
-    .opener div#title h2 {
-        font-size:9em;
-    }
-}
-@media (max-width:1100px) {
-    .opener div#title h2 {
-        font-size:8em;
-        line-height:.5;
-    }
-}
-@media (max-width:980px) {
-    .opener div#title h2 {
-        font-size:7em;
+        font-size:4em;
     }
 }
 @media (max-width:70em) {
@@ -926,8 +885,7 @@ div#footer-bar ul.social li {
 }
 @media (max-width:850px) {
     .opener div#title h2 {
-        font-size:6em;
-        line-height:.45;
+        font-size:3.25em;
         letter-spacing:-1px;
     }
 }
@@ -963,17 +921,9 @@ div#footer-bar ul.social li {
         line-height: 1.7;
     }
 }
-@media (max-width:740px) {
+@media (max-width:680px) {
     .opener div#title h2 {
-        font-size:5em;
-        line-height:.4;
-        word-spacing:5px;
-    }
-}
-@media (max-width:600px) {
-    .opener div#title h2 {
-        font-size:4em;
-        line-height:.35;
+        font-size:2.5em;
         text-shadow: 0px 0px 2px rgba(0,0,0,.5);
     }
 }
@@ -985,7 +935,7 @@ div#footer-bar ul.social li {
         font-size:2.25em;
     }
     .opener div#title h2 {
-        font-size:3.5em;
+        font-size:2.15em;
     }
     p.blurb {
         font-size:1.1em;
@@ -1069,13 +1019,6 @@ div#footer-bar ul.social li {
         line-height:1.5;
     }
 }
-@media (max-width:420px) {
-    .opener div#title h2 {
-        font-size:2.7em;
-        line-height:.3;
-        letter-spacing:0px;
-    }
-}
 @media (max-width:360px) {
     div.title h2 {
         font-size:2.75em;
@@ -1084,8 +1027,7 @@ div#footer-bar ul.social li {
         font-size:2em;
     }
     .opener div#title h2 {
-        font-size:2.45em;
-        line-height:.25;
+        font-size:1.8em;
         letter-spacing:0px;
     }
     div.title h1 span.titlepart {
