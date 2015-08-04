@@ -818,6 +818,118 @@ div#footer-bar ul.social li {
     float:left;
     display:inline-block;
 }
+/* --- lessons learned videos --- */
+#lessoncontrols {
+    margin-top: 1em;
+}
+#lessonnav {
+    position:relative;
+    display:block;
+    width:100%;
+    margin-top:.4em;
+}
+#lessonnav:after {
+    content:'';
+    width:100%;
+    height:0;
+    border-bottom:3px solid rgba(0,0,0,0.3);
+    position:absolute;
+    top:.9em;
+    left:0;
+    z-index: -1;
+}
+#lessonnav button {
+    font-size:1.375em;
+    line-height:1;
+    color:#eee;
+    font-weight:bold;
+    cursor:pointer;
+    -webkit-border-radius:.7em;
+    -moz-border-radius:.7em;
+    border-radius:.7em;
+    border:3px solid rgba(0,0,0,0.3);
+    width:1.4em;
+    height:1.4em;
+    padding:.05em 0 0 .2em;
+    background:#fff;
+    position:absolute;
+    top:0;
+    -webkit-transition:background-color:0.2s;
+    transition:background-color:0.2s;
+    outline:0;
+}
+#lessonnav button:nth-child(1) {
+    left:0;
+}
+#lessonnav button:nth-child(2) {
+    left:19%;
+}
+#lessonnav button:nth-child(3) {
+    left:39%;
+}
+#lessonnav button:nth-child(4) {
+    left:59%;
+}
+#lessonnav button:nth-child(5) {
+    left:79%;
+}
+#lessonnav button:nth-child(6) {
+    right:0;
+}
+#lessonplaypause {
+    position:relative;
+    display:block;
+    background:transparent;
+    width:100%;
+    padding-bottom:1.4rem;
+    border:2px solid rgba(0,0,0,0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    outline:0;
+}
+.lessonplay:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-top:-.7em;
+    margin-left:-.4em;
+    width: 0;
+    height: 0;
+    border-top: .8em solid transparent;
+    border-bottom: .8em solid transparent;
+    border-left: 1.4em solid rgba(0,0,0,0.3);
+}
+.lessonpause:before {
+    width: 8%;
+    height: 1.4em;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    content: "";
+    top: .5em;
+    left: 38%;
+}
+.lessonpause:after {
+    width: 8%;
+    height: 1.4em;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    content: "";
+    top: .5em;
+    right: 38%;
+}
+#lessonplaypause:hover {
+    border-color: rgba(0,0,0,0.8);
+}
+#lessonplaypause.lessonplay:hover:after {
+    border-left: 1.4em solid rgba(0,0,0,0.8);
+}
+#lessonplaypause.lessonpause:hover:after,
+#lessonplaypause.lessonpause:hover:before {
+    background:rgba(0,0,0,0.8);
+}
 @media (max-width:1240px) {
     .inset-video-right, section.inset .inset-video-right {
         margin-right:0;

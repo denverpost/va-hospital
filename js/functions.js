@@ -35,7 +35,25 @@ function revealSocial(type,link,title,image,desc,twvia,twrel) {
     return false;
 }
 
-function mediaFragOne() {
+var videoButtonBack;
+
+function eachButton(button,i) {
+    $(button[i]).siblings().each(function(){
+        button[i].style.backgroundColor = '#fff';
+    });
+    button[i].style.backgroundColor = '#bbb';
+    var buttonDelay = button[i];
+    videoButtonBack = setTimeout(function() {
+        buttonDelay.style.backgroundColor = '#fff';
+        if (i < button.length) {
+            eachButton(button,i+1);
+        } else {
+            video.load();
+        }
+    }, parseInt(button[i].getAttribute('data-length')));
+}
+
+function playFragment() {
     var video, sources, nav, buttons;
     video = document.querySelector('video#lessons');
     sources = video.getElementsByTagName('source');
@@ -48,13 +66,40 @@ function mediaFragOne() {
                 sources[i].setAttribute(
                     'src', (sources[i].getAttribute('data-original')
                     .concat('#t=' + this.getAttribute('data-start'))));
-                    video.load();
-                    video.play();
             };
+            video.load();
+            video.play();
+            $(this).siblings().each(function(){
+                this.style.backgroundColor = '#fff';
+            });
+            this.style.backgroundColor = '#bbb';
+            var buttonDelay = this;
+            setTimeout(function() {
+                buttonDelay.style.backgroundColor = '#fff';
+            }, parseInt(this.getAttribute('data-length')));
+            if ( $('#lessonplaypause').hasClass('lessonplay') ) {
+                $('#lessonplaypause').addClass('lessonpause').removeClass('lessonplay');
+            }
         });
     };
+
+    $('#lessonplaypause').on('click',function(){
+        if ( $(this).hasClass('lessonplay') ) {
+            $(this).addClass('lessonpause').removeClass('lessonplay');
+            video.play();
+            eachButton(buttons,0);
+        } else {
+            $(this).addClass('lessonplay').removeClass('lessonpause');
+            video.load();
+            clearTimeout(videoButtonBack);
+            $(buttons).each(function(){
+                this.style.backgroundColor = '#fff';
+            });
+        }
+    });
 }
-mediaFragOne();
+playFragment();
+
 
 $(document).foundation('reveal', {
     animation: 'fade',
