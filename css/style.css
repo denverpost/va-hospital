@@ -542,7 +542,7 @@ a:hover, * a:hover, a:hover * {
 }
 a.source {
     text-decoration: none;
-    background-color: yellow;
+    background-color: rgba(245,245,0,0.5);
     font-style: italic;
 }
 .row.solo {
