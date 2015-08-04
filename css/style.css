@@ -540,6 +540,11 @@ p a, p a:visited {
 a:hover, * a:hover, a:hover * {
     color:rgba(0,0,0,0.5);
 }
+a.source {
+    text-decoration: none;
+    background-color: yellow;
+    font-style: italic;
+}
 .row.solo {
     margin-bottom:4em;
 }
@@ -598,7 +603,7 @@ p.credit {
     font-family:'PT Sans', Helvetica, Arial, sans-serif;
     font-weight:400;
     font-style:normal;
-    cursor:default; 
+    cursor:default;
     text-indent:0;
 }
 .caption span.captionhed {
@@ -656,7 +661,7 @@ p.credit {
     outline:none;
 }
 .centergallery button.slick-next {
-    position:absolute;    
+    position:absolute;
     background:rgba(255,255,255,1.0);
     background-image:url('../img/nextButton.svg');
     background-repeat:no-repeat;
