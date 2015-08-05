@@ -62,7 +62,7 @@ body {
     background-image:url('../img/project-header.jpg');
 }
 .opener div#title {
-    background-color:rgba(0,0,0,0.35);
+    background-color:rgba(0,0,0,0.2);
     z-index: -1;
     bottom: 0;
     left: 0;
