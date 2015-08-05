@@ -708,6 +708,63 @@ p.credit {
     text-align:right;
     outline:none;
 }
+/* timeline */
+.timeline-box {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 5px 25px 0px 25px;
+}
+.timeline-connector {
+    width: 50%;
+    float: right;
+    border-left: 1px solid rgba(0,0,0,0.3);
+    height: 45px;
+}
+.timeline-date {
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    margin-top: -5px;
+    margin-bottom: 5px;
+    margin-right: -25px;
+    margin-left: -25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+}
+p.timeline-blurb {
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.0em;
+    line-height: 1.25;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2.timeline-title {
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+p.timeline-intro {
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+p.timeline-source {
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 0.85em;
+    font-style: italic;
+    text-align: right;
+}
+.timeline-cost {
+    color: rgba(204,0,0,1.0);
+    font-weight: bold;
+}
+#timeline-wrapper {
+    margin-bottom: 25px;
+}
 /* video */
 .centervideo {
     margin:4em 0 6em;
