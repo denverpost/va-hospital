@@ -714,6 +714,7 @@ p.credit {
     border-color: black;
     border-width: 1px;
     padding: 5px 25px 0px 25px;
+    clear: both;
 }
 .timeline-connector {
     width: 50%;
