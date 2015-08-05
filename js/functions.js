@@ -40,11 +40,17 @@ var videoButtonBack;
 function eachButton(button,i) {
     $(button[i]).siblings().each(function(){
         button[i].style.backgroundColor = '#fff';
+        document.getElementById('lessontitle').style.visibility = 'hidden';
+        document.getElementById('lessontitle').innerHTML = '';
     });
     button[i].style.backgroundColor = '#bbb';
+    document.getElementById('lessontitle').innerHTML = button[i].getAttribute('data-text');
+    document.getElementById('lessontitle').style.visibility = 'visible';
     var buttonDelay = button[i];
     videoButtonBack = setTimeout(function() {
         buttonDelay.style.backgroundColor = '#fff';
+        document.getElementById('lessontitle').style.visibility = 'hidden';
+        document.getElementById('lessontitle').innerHTML = '';
         if (i < button.length) {
             eachButton(button,i+1);
         } else {
@@ -71,11 +77,17 @@ function playFragment() {
             video.play();
             $(this).siblings().each(function(){
                 this.style.backgroundColor = '#fff';
+                document.getElementById('lessontitle').style.visibility = 'hidden';
+                document.getElementById('lessontitle').innerHTML = '';
             });
             this.style.backgroundColor = '#bbb';
+            document.getElementById('lessontitle').innerHTML = this.getAttribute('data-text');
+            document.getElementById('lessontitle').style.visibility = 'visible';
             var buttonDelay = this;
             setTimeout(function() {
                 buttonDelay.style.backgroundColor = '#fff';
+                document.getElementById('lessontitle').style.visibility = 'hidden';
+                document.getElementById('lessontitle').innerHTML = '';
             }, parseInt(this.getAttribute('data-length')));
             if ( $('#lessonplaypause').hasClass('lessonplay') ) {
                 $('#lessonplaypause').addClass('lessonpause').removeClass('lessonplay');
@@ -86,6 +98,12 @@ function playFragment() {
     $('#lessonplaypause').on('click',function(){
         if ( $(this).hasClass('lessonplay') ) {
             $(this).addClass('lessonpause').removeClass('lessonplay');
+            for (var i = sources.length - 1; i >= 0; i--) {
+                sources[i].setAttribute(
+                    'src', (sources[i].getAttribute('data-original')
+                    .concat('#t=' + this.getAttribute('data-start'))));
+            };
+            video.load();
             video.play();
             eachButton(buttons,0);
         } else {
@@ -94,6 +112,8 @@ function playFragment() {
             clearTimeout(videoButtonBack);
             $(buttons).each(function(){
                 this.style.backgroundColor = '#fff';
+                document.getElementById('lessontitle').style.visibility = 'hidden';
+                document.getElementById('lessontitle').innerHTML = '';
             });
         }
     });

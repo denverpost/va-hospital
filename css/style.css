@@ -853,6 +853,19 @@ div#footer-bar ul.social li {
     width:100%;
     margin-top:.4em;
 }
+#lessontitle {
+    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
+    font-size:1.15em;
+    line-height:1.9;
+    color:rgba(0,0,0,0.65);
+    font-style: italic;
+    text-align: center;
+    margin:.5em auto;
+    font-weight:400;
+    visibility:hidden;
+    -webkit-transition:visibility 0s linear 0.3s;
+    transition:visibility 0s linear 0.3s;
+}
 #lessonnav:after {
     content:'';
     width:100%;
