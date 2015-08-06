@@ -292,6 +292,9 @@ $(document).keyup(function(e) {
                 elChildren[i].style.opacity = "0";
             }
         }
+        for (var i = buttons.length - 1; i >= 0; i--) {
+            buttons[i].style.backgroundColor = 'rgba(255,255,255,0.7)';
+        }
         el.removeEventListener('click');
     }
 });

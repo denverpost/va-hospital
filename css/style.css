@@ -790,32 +790,46 @@ div.over-hide {
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    overflow:hidden;
     left:25%;
     width:50%;
     top:10%;
     height:80%;
     background-color: rgba(255,255,255,0.85);
-    border:1px solid rgba(0,70,70,0.85);
+    border:2px solid rgba(0,70,70,0.75);
     padding:1em;
     text-align:center;
     -webkit-transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
     transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
+}
+div.over-hide img {
+    width:100%;
+    margin:.5em 0 0
 }
 #over-diagnostic {
     width:70%;
     left:15%;
 }
 #over-diagnostic img {
-    width:30%;
-    margin: 0 .5em .5em 0;
+    width:40%;
+    margin: 0 0 1em 1em;
 }
-#over-diagnostic img {
-    width:30%;
-    margin: 0 .5em .5em 0;
+#over-inpatient,
+#over-concourse {
+    width:55%;
+    left:22.5%;
+}
+#over-concourse img {
+    width:40%;
+    margin: 0 1em 1em 0;
 }
 #over-solar img {
-    width:20%;
-    margin: 0 0 .5em .5em;
+    width:85%;
+    margin: 0 0 1em;
+}
+#over-clinics img,
+#over-inpatient img {
+    width:80%;
 }
 #graphic-over div.over-hide h3 {
     text-transform: uppercase;
@@ -837,7 +851,7 @@ div.over-hide {
     text-align: left;
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     font-size: 1em;
-    margin:0 auto;
+    margin:0 auto .5em;
     line-height: 1.4;
     font-weight: normal;
 }
