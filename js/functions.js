@@ -299,6 +299,12 @@ $(document).keyup(function(e) {
     }
 });
 
+$('#timeline').scroll(function(){
+    $(this).find('.gridphotograd').animate({opacity:'0'},700,function(){
+        $(this).css('display','none');
+    });
+});
+
 function getAdSize() {
     if ( $(window).width() >= 740 ) {
         var adSizes = ['ad=medium','728','90'];

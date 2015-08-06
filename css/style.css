@@ -796,7 +796,7 @@ div.over-hide {
     top:10%;
     height:80%;
     background-color: rgba(255,255,255,0.85);
-    border:2px solid rgba(0,70,70,0.75);
+    border:2px solid rgba(0,70,70,0.55);
     padding:1em;
     text-align:center;
     -webkit-transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
@@ -857,11 +857,28 @@ div.over-hide img {
 }
 /* timeline */
 #timeline {
+    position:relative;
+    display: block;
     height:40em;
     overflow-x:hidden;
     overflow-y:scroll;
     border:1px solid rgba(0,0,0,0.7);
     background:rgba(255,255,255,1);
+}
+#timeline .gridphotograd {
+    height:25%;
+    width:100%;
+    left:0;
+    bottom:0;
+    position:absolute;
+    display: block;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.0), rgba(255,255,255,1.0));
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.0), rgba(255,255,255,1.0));
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.0), rgba(255,255,255,1.0));
+    background: -o-linear-gradient(top, rgba(255,255,255,0.0), rgba(255,255,255,1.0));
+    background: linear-gradient(to bottom, rgba(255,255,255,0.0), rgba(255,255,255,1.0));
+    opacity:1;
+    z-index:99;
 }
 .timeline-box {
     border-style: solid;
