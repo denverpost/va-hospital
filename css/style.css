@@ -709,12 +709,20 @@ p.credit {
     outline:none;
 }
 /* timeline */
+#timeline {
+    height:40em;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    border:1px solid rgba(0,0,0,0.8);
+    background:rgba(255,255,255,1);
+}
 .timeline-box {
     border-style: solid;
     border-color: black;
     border-width: 1px;
     padding: 5px 25px 0px 25px;
     clear: both;
+    background-color:rgba(0,0,0,0.04);
 }
 .timeline-connector {
     width: 50%;
