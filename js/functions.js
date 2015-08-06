@@ -120,6 +120,32 @@ function playFragment() {
 }
 playFragment();
 
+function graphicOverlay() {
+    nav = document.querySelector('#graphics');
+    buttons = nav.getElementsByTagName('button');
+ 
+    for (var i = buttons.length - 1; i >= 0; i--) {
+        buttons[i].addEventListener('click', function() {
+            el = document.getElementById("graphic-over");
+            elChild = document.getElementById('over-' + this.getAttribute('data-pop'));
+            el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+            elChild.style.visibility = (elChild.style.visibility == "visible") ? "hidden" : "visible";
+            el.addEventListener('click', function() {
+                el = document.getElementById("graphic-over");
+                el.style.visibility = "hidden";
+                elChildren = el.childNodes;
+                for(var i=0;i<elChildren.length;i++){
+                    if (elChildren[i].className == "over-hide") {
+                        console.log(elChildren[i]);
+                        elChildren[i].style.visibility = "hidden";
+                    }
+                }
+                this.removeEventListener('click');
+            })
+        });
+    };   
+}
+graphicOverlay()
 
 $(document).foundation('reveal', {
     animation: 'fade',

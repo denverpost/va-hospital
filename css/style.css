@@ -708,12 +708,90 @@ p.credit {
     text-align:right;
     outline:none;
 }
+/* graphic */
+#graphics {
+    position: relative;
+}
+#graphics button {
+    font-size:1.375em;
+    line-height:1;
+    color:#eee;
+    font-weight:bold;
+    cursor:pointer;
+    -webkit-border-radius:.85em;
+    -moz-border-radius:.85em;
+    border-radius:.85em;
+    border:.2em solid rgba(220,0,0,0.7);
+    width:1.7em;
+    height:1.7em;
+    padding:.05em 0 0 .2em;
+    background:rgba(255,255,255,0.7);
+    position:absolute;
+    top:0;
+    -webkit-transition:background-color:0.2s;
+    transition:background-color:0.2s;
+    outline:0;
+}
+button#graphic-concourse {
+    top:46%;
+    left:28%;
+}
+button#graphic-solar {
+    top:37%;
+    left:43%;
+}
+button#graphic-diagnostic {
+    top:51%;
+    left:52%;
+}
+button#graphic-energy {
+    top:19%;
+    left:85%;
+}
+button#graphic-inpatient {
+    top:25%;
+    left:73%;
+}
+button#graphic-garages {
+    top:10%;
+    left:75%;
+}
+button#graphic-clinics {
+    top:21%;
+    left:46%;
+}
+button#graphic-research {
+    top:62%;
+    left:17%;
+}
+#graphic-over {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+}
+#graphic-over div.over-hide {
+    visibility: hidden;
+    position: absolute;
+    left:25%;
+    width:50%;
+    top:10%;
+    height:80%;
+    background-color: rgba(255,255,255,0.9);
+    border:1px solid rgba(0,70,70,0.85);
+    padding:1em;
+    text-align:center;
+}
 /* timeline */
 #timeline {
     height:40em;
     overflow-x:hidden;
     overflow-y:scroll;
-    border:1px solid rgba(0,0,0,0.8);
+    border:1px solid rgba(0,0,0,0.7);
     background:rgba(255,255,255,1);
 }
 .timeline-box {
