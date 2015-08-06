@@ -786,7 +786,7 @@ button#graphic-research {
     color:rgba(0,0,0,0.5);
     font-size:1.5em;
 }
-#graphic-over div.over-hide {
+div.over-hide {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -800,6 +800,22 @@ button#graphic-research {
     text-align:center;
     -webkit-transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
     transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
+}
+#over-diagnostic {
+    width:70%;
+    left:15%;
+}
+#over-diagnostic img {
+    width:30%;
+    margin: 0 .5em .5em 0;
+}
+#over-diagnostic img {
+    width:30%;
+    margin: 0 .5em .5em 0;
+}
+#over-solar img {
+    width:20%;
+    margin: 0 0 .5em .5em;
 }
 #graphic-over div.over-hide h3 {
     text-transform: uppercase;
