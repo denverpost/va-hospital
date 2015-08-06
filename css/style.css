@@ -733,15 +733,15 @@ p.credit {
     outline:0;
 }
 button#graphic-concourse {
-    top:46%;
-    left:28%;
+    top:50%;
+    left:27%;
 }
 button#graphic-solar {
-    top:37%;
-    left:43%;
+    top:39%;
+    left:41%;
 }
 button#graphic-diagnostic {
-    top:51%;
+    top:52%;
     left:52%;
 }
 button#graphic-energy {
@@ -757,12 +757,12 @@ button#graphic-garages {
     left:75%;
 }
 button#graphic-clinics {
-    top:21%;
-    left:46%;
+    top:25%;
+    left:44%;
 }
 button#graphic-research {
-    top:62%;
-    left:17%;
+    top:64%;
+    left:15%;
 }
 #graphic-over {
     visibility: hidden;
