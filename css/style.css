@@ -766,6 +766,7 @@ button#graphic-research {
 }
 #graphic-over {
     visibility: hidden;
+    opacity: 0;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -773,18 +774,56 @@ button#graphic-research {
     height:100%;
     text-align:center;
     z-index: 1000;
+    background-color:rgba(255,255,255,0.5);
+    -webkit-transition:opacity 0.3s ease-in-out;
+    transition:opacity 0.3s ease-in-out;
+}
+#graphic-over:after {
+    content:'\2715';
+    position:absolute;
+    top:.5em;
+    right:.5em;
+    color:rgba(0,0,0,0.5);
+    font-size:1.5em;
 }
 #graphic-over div.over-hide {
     visibility: hidden;
+    opacity: 0;
     position: absolute;
     left:25%;
     width:50%;
     top:10%;
     height:80%;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.85);
     border:1px solid rgba(0,70,70,0.85);
     padding:1em;
     text-align:center;
+    -webkit-transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
+    transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
+}
+#graphic-over div.over-hide h3 {
+    text-transform: uppercase;
+    color:rgba(0,0,0,0.6);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 2.05em;
+    margin:0 auto;
+    font-weight: bold;
+}
+#graphic-over div.over-hide h2 {
+    text-transform: uppercase;
+    color:rgba(0,0,0,0.9);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.85em;
+    margin:0 auto.25em;
+    font-weight: normal;
+}
+#graphic-over div.over-hide p {
+    text-align: left;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin:0 auto;
+    line-height: 1.4;
+    font-weight: normal;
 }
 /* timeline */
 #timeline {
