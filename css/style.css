@@ -236,13 +236,14 @@ section.inset div.title.lowertitle h1 {
     font-size:2.25em;
 }
 section.inset h3.subheading {
-    margin-top:2em;
+    margin-top:1em;
     font-size:2.05em;
     width:90%;
 }
 section.inset p, .reverse li {
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     font-size:1.2em;
+    line-height: 1.85;
 }
 section.inset .twinphoto {
     margin:4em 0;
@@ -540,6 +541,16 @@ p a, p a:visited {
 a:hover, * a:hover, a:hover * {
     color:rgba(0,0,0,0.5);
 }
+a.photos {
+    position: relative;
+    top:0;
+    font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
+    font-size:.95em;
+    text-decoration: none;
+    background-color: rgba(0,70,70,0.1);
+    line-height:1;
+    padding:.15em .3em .15em;
+}
 a.source {
     position: relative;
     top:-.3em;
@@ -550,8 +561,21 @@ a.source {
     line-height:1;
     padding:.1em .3em .15em;
 }
+a.photos:hover,
 a.source:hover {
     background-color:rgba(0,70,70,0.2);
+}
+a.photos:before {
+    content:'';
+    display:inline-block;
+    height:1em;
+    width:1em;
+    position:relative;
+    top:.15em;
+    margin:.1em .35em 0 .25em;
+    background-image:url('../img/icon-photos.png');
+    background-position: center center;
+    background-size:contain;
 }
 a.source:before {
     content:'';
