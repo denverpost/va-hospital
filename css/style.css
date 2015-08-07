@@ -421,12 +421,12 @@ div.title h2 {
     z-index:-1;
 }
 div.title h1 {
-    margin:8% 0 35%;
+    margin:3em auto;
     text-align: center;
     font-family:'PT Sans Narrow', Helvetica, Arial, sans-serif !important;
-    font-size:2.65em;
+    font-size:3.2em;
     font-weight:400;
-    line-height:1;
+    line-height:1.1;
     text-transform:uppercase;
     color:rgba(34,34,34,1);
     display:block;
@@ -712,6 +712,24 @@ p.credit {
 #graphics {
     position: relative;
 }
+#graphics p#graphic-legend {
+    opacity: 1;
+    text-transform:uppercase;
+    font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:.9em;
+    letter-spacing:1px;
+    font-style:normal;
+    color:rgba(0,0,0,0.6);
+    display:block;
+    position:absolute;
+    text-align:right;
+    right:1em;
+    bottom:5em;
+    -webkit-transition:opacity 0.3s linear;
+    transition:opacity 0.3s linear;
+}
 #graphics button {
     font-size:1.375em;
     line-height:1;
@@ -775,8 +793,8 @@ button#graphic-research {
     text-align:center;
     z-index: 1000;
     background-color:rgba(255,255,255,0.5);
-    -webkit-transition:opacity 0.3s ease-in-out;
-    transition:opacity 0.3s ease-in-out;
+    -webkit-transition:opacity 0.2s linear;
+    transition:opacity 0.2s linear;
 }
 #graphic-over:after {
     content:'\2715';
@@ -799,8 +817,8 @@ div.over-hide {
     border:2px solid rgba(0,70,70,0.55);
     padding:1em;
     text-align:center;
-    -webkit-transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
-    transition:visibility 0s linear 0.3s,opacity 0.3s ease-in-out;
+    -webkit-transition:visibility 0s linear 0.2s,opacity 0.2s linear;
+    transition:visibility 0s linear 0.2s,opacity 0.2s linear;
 }
 div.over-hide img {
     width:100%;
@@ -855,18 +873,57 @@ div.over-hide img {
     line-height: 1.4;
     font-weight: normal;
 }
+/* cards */
+#officials [class*="block-grid-"]>li {
+    padding:.5em;
+}
+#officials ul li div.card {
+    padding:1em;
+    height:100%;
+    background-color: rgba(0,0,0,0.05);
+}
+#officials ul li div.card img {
+    width:40%;
+    float:right;
+    margin:0 0 .5em .5em;
+}
+#officials div.card h4 {
+    font-size:1.25em;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+    margin:.1em 0 .35em;
+    text-align: left;
+}
+#officials div.card p {
+    font-size:1em;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+    margin:0 0 .5em;
+    text-align: left;
+}
+#officials div.card p.salary {
+    font-weight:bold;
+}
 /* timeline */
 #timeline {
     position:relative;
     display: block;
-    height:40em;
+    height:50em;
     overflow-x:hidden;
     overflow-y:scroll;
     border:1px solid rgba(0,0,0,0.7);
     background:rgba(255,255,255,1);
 }
+section#timeline > p:nth-child(3) {
+    line-height:1.7;
+}
+#timeline h3.subheading {
+    margin-top:1em;
+}
 #timeline .gridphotograd {
-    height:25%;
+    height:35%;
     width:100%;
     left:0;
     bottom:0;
@@ -927,8 +984,10 @@ p.timeline-intro {
 }
 p.timeline-source {
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    font-size: 0.85em;
+    color:rgba(0,0,0,0.6);
+    font-size: 0.8em;
     line-height: 1.2;
+    margin-top:.5em;
     font-style: italic;
     text-align: right;
 }

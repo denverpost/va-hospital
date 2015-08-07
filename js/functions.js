@@ -123,6 +123,7 @@ function graphicOverlay() {
  
     for (var i = buttons.length - 1; i >= 0; i--) {
         buttons[i].addEventListener('click', function() {
+            document.getElementById('graphic-legend').style.opacity = '0';
             $(this).siblings('button').each(function(){
                 this.style.backgroundColor = 'rgba(255,255,255,0.7)';
             });
@@ -300,7 +301,7 @@ $(document).keyup(function(e) {
 });
 
 $('#timeline').scroll(function(){
-    $(this).find('.gridphotograd').animate({opacity:'0'},700,function(){
+    $(this).find('.gridphotograd').animate({opacity:'0'},400,function(){
         $(this).css('display','none');
     });
 });
