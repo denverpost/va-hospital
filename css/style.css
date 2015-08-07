@@ -162,6 +162,11 @@ p.bylinebottom {
     height:0;
     clear:both;
 }
+section.inset p.byline {
+    font-style: italic;
+    font-size:95%;
+    margin-bottom:2em;
+}
 section.inset a.hideme, section.inset a.expandme {
     text-transform: uppercase;
     font-size:.9em;
