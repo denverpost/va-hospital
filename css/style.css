@@ -925,6 +925,12 @@ li.footnotes {
     border:1px solid rgba(0,0,0,0.7);
     background:rgba(255,255,255,1);
 }
+#timeline hr {
+    border:solid rgba(0,0,0,0.2);
+    border-width:1px 0 0;
+    width:60%;
+    margin:1.8em auto;
+}
 section#timeline > p:nth-child(3) {
     line-height:1.7;
 }
