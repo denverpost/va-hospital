@@ -901,6 +901,20 @@ div.over-hide img {
 #officials div.card p.salary {
     font-weight:bold;
 }
+/* footnotes */
+#footnotes .panel {
+background-color: rgba(0,0,0,0.015);
+}
+ul.footnotes {
+  list-style-type: none;
+}
+li.footnotes {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.0em;
+  line-height: 1.25;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 /* timeline */
 #timeline {
     position:relative;
