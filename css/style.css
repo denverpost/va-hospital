@@ -857,7 +857,7 @@ div.over-hide img {
     color:rgba(0,0,0,0.9);
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     font-size: 1.85em;
-    margin:0 auto.25em;
+    margin:0 auto .25em;
     font-weight: normal;
 }
 #graphic-over div.over-hide p {
@@ -1263,7 +1263,11 @@ div#footer-bar ul.social li {
         width:50%;
     }
     .opener div#title h2 {
-        font-size:4em;
+        font-size:6em;
+    }
+    div.over-hide {
+        top:5%;
+        height:90%;
     }
 }
 @media (max-width:70em) {
@@ -1312,13 +1316,20 @@ div#footer-bar ul.social li {
         right:.2em;
         line-height:1;
     }
-}
-@media (max-width:850px) {
-    .opener div#title h2 {
-        font-size:3.25em;
+    #graphic-over div.over-hide h3 {
+        font-size: 1.75em;
+    }
+    #graphic-over div.over-hide h2 {
+        font-size: 1.5em;
+    }
+    #graphic-over div.over-hide p {
+        font-size: .9em;
     }
 }
 @media (max-width:800px) {
+    .opener div#title h2 {
+        font-size:5em;
+    }
     .centergallery .caption {
         font-size:.8em;
     }
@@ -1350,18 +1361,12 @@ div#footer-bar ul.social li {
         line-height: 1.7;
     }
 }
-@media (max-width:680px) {
-    .opener div#title h2 {
-        font-size:2.5em;
-        text-shadow: 1px 1px 3px rgba(0,0,0,.75);
-    }
-}
 @media (max-width:540px) {
     div.title h1 {
         font-size:2.25em;
     }
     .opener div#title h2 {
-        font-size:2.15em;
+        font-size:4em;
         letter-spacing:0px;
     }
     p.blurb {
@@ -1451,8 +1456,7 @@ div#footer-bar ul.social li {
         font-size:2em;
     }
     .opener div#title h2 {
-        font-size:1.8em;
-
+        font-size:3em;
     }
     p, .reveal-modal li {
         font-size:1em;
