@@ -62,7 +62,7 @@ body {
     background-image:url('../img/project-header.jpg');
 }
 .opener div#title {
-    background-color:rgba(0,0,0,0.2);
+    background-color:rgba(0,0,0,0.15);
     z-index: -1;
     bottom: 0;
     left: 0;
@@ -70,14 +70,14 @@ body {
     height: 100%;
 }
 .opener div#title h2 {
-    font-size:5em;
+    font-size:7em;
     width:100%;
     line-height:1;
-    color:#f9f9f9;
+    color:rgba(255,255,255,0.975);
     font-weight: 700;
-    letter-spacing:-2px;
-    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-    padding-top:.5em;
+    letter-spacing:-1px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.75);
+    padding-top:.25em;
 }
 #adwrapper a.boxclose:hover {
     color:#333;
@@ -121,14 +121,6 @@ div#name2 h1 {
     line-height:1.7;
     font-weight:400;
     color:#555;
-}
-.lowertitle h3 {
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    color:rgba(0,0,0,0.5);
-    transform: scale(1,.7);
-    letter-spacing: 1px;
 }
 p.lead {
     font-size:1.3em;
@@ -245,12 +237,15 @@ section.inset p, .reverse li {
     font-size:1.2em;
     line-height: 1.85;
 }
+section.inset .centerphoto {
+    margin:2em 0;
+}
 section.inset .twinphoto {
     margin:4em 0;
 }
 section.inset p.caption {
     font-size:1.05em;
-    line-height:1.85;
+    line-height:1.4;
 }
 section.inset .inset-video-right {
     float:right;
@@ -404,23 +399,6 @@ p.lead .has-tip {
     font-weight:bold;
     color:#009696;
 }
-div.title.lowertitle {
-    margin-top: 4em;
-}
-div.title h2 {
-    margin:25% 0 4%;
-    text-align: center;
-    font-family:'Noticia Text', Helvetica, Arial, sans-serif !important;
-    font-weight:700;
-    font-size:5.8em;
-    letter-spacing:0px;
-    line-height:1;
-    padding-bottom:1em;
-    border-bottom:1px solid #aaa;
-    color:rgba(34,34,34,1);
-    display:block;
-    z-index:-1;
-}
 div.title h1 {
     margin:3em auto;
     text-align: center;
@@ -432,13 +410,6 @@ div.title h1 {
     color:rgba(34,34,34,1);
     display:block;
     z-index:-1;
-}
-div.title.lowertitle h1 {
-    font-size:2.75em;
-    margin:1em auto 2em;
-    border-top:1px solid #aaa;
-    padding-top:1em;
-    width:80%;
 }
 h1, h2, h3, h4 {
   	font-family:'PT Sans Narrow', Helvetica, Arial, sans-serif !important;
@@ -1322,11 +1293,6 @@ div#footer-bar ul.social li {
     .top-bar-section ul li.social.firstsocial {
         padding-left:0;
     }
-    div.title h2 {
-        font-size:5em;
-        margin-left:5%;
-        margin-right:5%;
-    }
     p, .reveal-modal li {
         color:#333;
         font-size:1.1em;
@@ -1350,7 +1316,6 @@ div#footer-bar ul.social li {
 @media (max-width:850px) {
     .opener div#title h2 {
         font-size:3.25em;
-        letter-spacing:-1px;
     }
 }
 @media (max-width:800px) {
@@ -1388,26 +1353,21 @@ div#footer-bar ul.social li {
 @media (max-width:680px) {
     .opener div#title h2 {
         font-size:2.5em;
-        text-shadow: 0px 0px 2px rgba(0,0,0,.5);
+        text-shadow: 1px 1px 3px rgba(0,0,0,.75);
     }
 }
 @media (max-width:540px) {
-    div.title h2 {
-        font-size:3.5em;
-    }
     div.title h1 {
         font-size:2.25em;
     }
     .opener div#title h2 {
         font-size:2.15em;
+        letter-spacing:0px;
     }
     p.blurb {
         font-size:1.1em;
         line-height:1.7;
         margin-bottom:2em;
-    }
-    div.title.lowertitle {
-        margin-top: 2em;
     }
     .inset-video-right, section.inset .inset-video-right {
         padding-left:0;
@@ -1492,14 +1452,7 @@ div#footer-bar ul.social li {
     }
     .opener div#title h2 {
         font-size:1.8em;
-        letter-spacing:0px;
-    }
-    div.title h1 span.titlepart {
-        display: block;
-    }
-    div.title.lowertitle h1, section.inset div.title.lowertitle h1{
-        width:90%;
-        font-size:1.85em;
+
     }
     p, .reveal-modal li {
         font-size:1em;
