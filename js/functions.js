@@ -117,6 +117,82 @@ function playFragment() {
 }
 playFragment();
 
+var buildButtonBack;
+
+function eachBuildButton(button,i) {
+    $(button[i]).siblings().each(function(){
+        button[i].style.backgroundColor = '#fff';
+        document.getElementById('builddate').style.visibility = 'hidden';
+        document.getElementById('builddate').innerHTML = '';
+    });
+    button[i].style.backgroundColor = '#bbb';
+    document.getElementById('builddate').innerHTML = button[i].getAttribute('data-text');
+    document.getElementById('builddate').style.visibility = 'visible';
+    var buttonDelay = button[i];
+    document.getElementById('buildimg').src = './img/build/' + button[i].getAttribute('data-img') + '.jpg';
+    buildButtonBack = setTimeout(function() {
+        buttonDelay.style.backgroundColor = '#fff';
+        document.getElementById('builddate').style.visibility = 'hidden';
+        document.getElementById('builddate').innerHTML = '';
+        if (i < button.length - 1) {
+            eachBuildButton(button,i+1);
+        } else {
+            $('#buildplaypause').addClass('buildplay').removeClass('buildpause');
+            clearTimeout(buildButtonBack);
+            document.getElementById('builddate').src = './img/build/build-title.jpg';
+            document.getElementById('builddate').innerHTML = '';
+        }
+    }, 2000);
+}
+
+function playBuilder() {
+    var image, nav, buttons, origin;
+    image = document.querySelector('#buildimg');
+    origin = image.src;
+    nav = document.querySelector('#buildnav');
+    buttons = nav.getElementsByTagName('button');
+ 
+    for (var i = buttons.length - 1; i >= 0; i--) {
+        buttons[i].addEventListener('click', function() {
+            image.src = './img/build/' + this.getAttribute('data-img') + '.jpg';
+            $(this).siblings().each(function(){
+                this.style.backgroundColor = '#fff';
+                document.getElementById('builddate').style.visibility = 'hidden';
+                document.getElementById('builddate').innerHTML = '';
+            });
+            this.style.backgroundColor = '#bbb';
+            document.getElementById('builddate').innerHTML = this.getAttribute('data-text');
+            document.getElementById('builddate').style.visibility = 'visible';
+            var buttonDelay = this;
+            setTimeout(function() {
+                buttonDelay.style.backgroundColor = '#fff';
+                image.src = './img/build/' + this.getAttribute('data-img') + '.jpg';
+                document.getElementById('builddate').style.visibility = 'hidden';
+                document.getElementById('builddate').innerHTML = '';
+            }, 2000);
+        });
+    };
+
+    $('#buildplaypause').on('click',function(){
+        if ( $(this).hasClass('buildplay') ) {
+            $(this).addClass('buildpause').removeClass('buildplay');
+            image.src = './img/build/' + this.getAttribute('data-img') + '.jpg';
+            eachBuildButton(buttons,0);
+        } else {
+            $(this).addClass('buildplay').removeClass('buildpause');
+            clearTimeout(buildButtonBack);
+            $(buttons).each(function(){
+                this.style.backgroundColor = '#fff';
+                document.getElementById('builddate').style.visibility = 'hidden';
+                document.getElementById('builddate').innerHTML = '';
+                document.getElementById('buildimg').src = './img/build/build-title.jpg';
+                document.getElementById('builddate').innerHTML = '';
+            });
+        }
+    });
+}
+playBuilder();
+
 function graphicOverlay() {
     nav = document.querySelector('#graphics');
     buttons = nav.getElementsByTagName('button');
