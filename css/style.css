@@ -1358,7 +1358,7 @@ div#footer-bar ul.social li {
 #buildnav button:nth-child(12) {
     right:0;
 }
-#build .imgholder {
+#progress .imgholder {
     position: relative;
     display:block;
     width:100%;
